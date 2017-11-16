@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XAMLStandardSample.Views.MainView" 
+             xmlns:alias="clr-namespace:Xamarin.Forms.Alias;assembly=Xamarin.Forms.Alias">
+    <ContentPage.Content>
+        <alias:StackPanel>
+            <alias:TextBlock
+                Text="Welcome to XAML Standard!"/>
+            <ListView 
+                ItemsSource="{Binding Monkeys}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <alias:StackPanel>
+                                <alias:TextBlock
+                                    Text="{Binding Name}"/>
+                            </alias:StackPanel>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </alias:StackPanel>
+    </ContentPage.Content>
+</ContentPage>
